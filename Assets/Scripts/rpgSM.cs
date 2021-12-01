@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class rpgSM : StateMachine
 {
@@ -8,6 +9,7 @@ public class rpgSM : StateMachine
     public InputController Input => _input;
     void Start()
     {
+        
         ChangeState<SetupBattleState>();
     }
 

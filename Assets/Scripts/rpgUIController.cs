@@ -28,11 +28,18 @@ public class rpgUIController : MonoBehaviour
     {
         EnemyTurnState.EnemyTurnBegan -= OnEnemyTurnBegan;
         EnemyTurnState.EnemyTurnEnded -= OnEnemyTurnEnded;
+        WinState.WinStateBegan -= OnWinStateBegan;
+        LoseState.LoseStateBegan -= OnLoseStateBegan;
     }
 
     private void Start()
     {
         _enemyThinkingTextUI.gameObject.SetActive(false);
+        _menuReturnUI.gameObject.SetActive(false);
+        _loseTextUI.gameObject.SetActive(false);
+       _winTextUI.gameObject.SetActive(false);
+        
+       
     }
 
     private void Update()
